@@ -1,0 +1,163 @@
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.summarySection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.currencyTitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.currencyTitle::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 16px;
+    background: var(--accent-primary);
+    border-radius: 2px;
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.cardContent {
+    z-index: 1;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.valueBalance {
+    color: var(--text-primary);
+}
+
+.valueIncome {
+    color: var(--success);
+}
+
+.valueExpense {
+    color: var(--danger);
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.1;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.iconBalance {
+    color: var(--accent-primary);
+}
+
+.iconIncome {
+    color: var(--success);
+}
+
+.iconExpense {
+    color: var(--danger);
+}
+
+.chartContainer {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px;
+}
+
+.chartTitle {
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.chartsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.detailsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.detailsCard {
+    padding: 1.5rem;
+}
+
+.detailsTitle {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.noData {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .value {
+        font-size: 1.5rem;
+    }
+}

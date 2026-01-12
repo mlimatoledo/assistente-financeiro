@@ -1,0 +1,127 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal {
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.closeBtn {
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--text-secondary);
+}
+
+.closeBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.typeToggle {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--bg-primary);
+    padding: 0.25rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.typeBtn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--text-secondary);
+    padding: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.typeBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.activeIncome {
+    background-color: rgba(16, 185, 129, 0.1);
+    /* Emerald 500 */
+    color: var(--success);
+    border-color: var(--success);
+}
+
+.activeExpense {
+    background-color: rgba(239, 68, 68, 0.1);
+    /* Red 500 */
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+.activeTransfer {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputGroup label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+    background-color: var(--accent-primary);
+    color: white;
+    padding: 1rem;
+}
+
+.submitBtn:hover {
+    background-color: var(--accent-secondary);
+}
+
+.activeProfile {
+    background-color: rgba(59, 130, 246, 0.1);
+    /* Blue 500 */
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
+}

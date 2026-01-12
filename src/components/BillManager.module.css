@@ -1,0 +1,405 @@
+.container {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.headerTitle {
+    margin: 0;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.monthSelector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.monthDisplay {
+    font-weight: 600;
+    min-width: 120px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.selectorBtn {
+    padding: 0.25rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+}
+
+.selectorBtn:hover {
+    color: var(--accent-primary);
+    background: transparent;
+}
+
+.viewToggle {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--bg-secondary);
+    padding: 0.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.viewBtn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.viewBtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.activeView {
+    background: var(--accent-primary) !important;
+    color: white !important;
+}
+
+.billList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.billItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+.billItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-primary);
+}
+
+.dueDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    padding: 0.5rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.day {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.month {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.overdue .dueDate {
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+.billInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.billName {
+    font-weight: 600;
+}
+
+.billValue {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.actionBtn {
+    padding: 0.5rem;
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: 8px;
+}
+
+.actionBtn:hover {
+    background: var(--bg-secondary);
+    color: var(--accent-primary);
+}
+
+.payBtn {
+    background: rgba(16, 185, 129, 0.1) !important;
+    color: #10b981 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 600 !important;
+}
+
+.payBtn:hover {
+    background: #10b981 !important;
+    color: white !important;
+}
+
+.usdBadge {
+    background: #3b82f6;
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.deleteBtn:hover {
+    color: var(--danger);
+}
+
+.calendarBtn:hover {
+    color: #4285F4;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+}
+
+.addBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.addBtn:hover {
+    background: var(--accent-secondary);
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modalContent {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.currencyToggle {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem;
+    border-radius: 12px;
+}
+
+.currencyToggle button {
+    flex: 1;
+    padding: 0.6rem !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: var(--text-secondary) !important;
+    font-size: 0.85rem !important;
+    transition: all 0.2s !important;
+}
+
+.currencyToggle .activeCurrency {
+    background: var(--accent-primary) !important;
+    color: white !important;
+}
+
+/* Select Input Dark Theme */
+.selectInput {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.selectInput:hover {
+    border-color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.selectInput:focus {
+    border-color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.selectInput option {
+    background: #1e293b;
+    color: white;
+    padding: 0.5rem;
+}
+
+.selectInput option:hover {
+    background: #334155;
+}
+
+.selectInput option:disabled {
+    color: #64748b;
+}
+
+/* File Attachment Styles */
+.fileInput {
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.fileInput:hover {
+    border-color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.attachmentPreview {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.fileSize {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.removeAttachment {
+    margin-left: auto;
+    padding: 0.25rem;
+    background: transparent !important;
+    color: var(--danger) !important;
+    border-radius: 4px !important;
+}
+
+.removeAttachment:hover {
+    background: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Preview Modal */
+.previewModal {
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    padding: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.previewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.previewHeader h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.previewContent {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cancelBtn {
+    flex: 1;
+    background: var(--bg-secondary);
+}
+
+.saveBtn {
+    flex: 1;
+    background: var(--accent-primary);
+    color: white;
+}

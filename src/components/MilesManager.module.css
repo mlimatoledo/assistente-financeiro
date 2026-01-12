@@ -1,0 +1,193 @@
+.container {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.headerTitle {
+    margin: 0;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.airlineCard {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.airlineCard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-primary);
+    opacity: 0.5;
+}
+
+.airlineCard:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-primary);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.airlineName {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.statsRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.statLabel {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.statValue {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.milheiroValue {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.entryList {
+    margin-top: 1.5rem;
+}
+
+.entryItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.entryHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    border-top: none;
+    border-radius: 8px 8px 0 0;
+}
+
+.addBtn {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+}
+
+.addBtn:hover {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    border-color: transparent;
+}
+
+.deleteBtn {
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 0.25rem;
+}
+
+.deleteBtn:hover {
+    color: var(--danger);
+    background: transparent;
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modalContent {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+}
+
+.formGroup {
+    margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.saveBtn {
+    flex: 1;
+    background: var(--accent-primary);
+    color: white;
+}
+
+.cancelBtn {
+    flex: 1;
+    background: var(--bg-secondary);
+}

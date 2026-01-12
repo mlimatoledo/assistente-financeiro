@@ -1,0 +1,173 @@
+.bankGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.bankCard {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.bankCard:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.bankHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.bankName {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin: 0;
+}
+
+.bankBalance {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.addBankBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+    min-height: 120px;
+}
+
+.addBankBtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.deleteBankBtn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.deleteBankBtn:hover {
+    opacity: 1;
+    color: var(--danger);
+}
+
+.iconBtn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconBtn:hover {
+    opacity: 1;
+    color: var(--text-primary);
+}
+
+.iconBtn.deleteBtn:hover {
+    color: var(--danger);
+}
+
+.inputField {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.inputField:focus {
+    outline: 1px solid var(--accent-primary);
+}
+
+.confirmBtn {
+    flex: 1;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.confirmBtn:hover {
+    background: var(--accent-secondary);
+}
+
+.cancelBtn {
+    flex: 1;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 4px;
+}
+
+.cancelBtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.activeProfileIcon {
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inactiveProfileIcon {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inactiveProfileIcon:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
